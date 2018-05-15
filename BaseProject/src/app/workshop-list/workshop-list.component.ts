@@ -25,9 +25,4 @@ export class WorkshopListComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  handleChildEvent(event) {
-    console.log("received: " + event);
-  }
-
 }
