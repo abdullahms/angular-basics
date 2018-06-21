@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WorkshopListComponent implements OnInit {
 
-  workshop = {
+  workshops = [{
     id: 1,
     name: 'Angular Connect',
     date: '9/03/2034',
@@ -19,7 +19,33 @@ export class WorkshopListComponent implements OnInit {
       city: 'London',
       country: 'England'
     }
-  }
+  },
+  {
+    id: 1,
+    name: 'Angular Connect',
+    date: '9/03/2034',
+    time: '10:00 am',
+    price: 599.99,
+    imageUrl: 'someimage.jpg',
+    location:{
+      address: '1057 DT',
+      city: 'London',
+      country: 'England'
+    }
+  },
+  {
+    id: 1,
+    name: 'Angular Connect',
+    date: '9/03/2034',
+    time: '10:00 am',
+    price: 599.99,
+    imageUrl: 'someimage.jpg',
+    location:{
+      address: '1057 DT',
+      city: 'London',
+      country: 'England'
+    }
+  }]
 
   constructor() { }
 

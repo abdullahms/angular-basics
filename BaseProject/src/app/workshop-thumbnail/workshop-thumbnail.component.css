@@ -1,0 +1,11 @@
+.pad-left{
+   margin-left: 10px 
+}
+
+.format-thumbnail{
+    background-color:darkgray; 
+    border-color: #333; 
+    cursor: pointer;
+    color: antiquewhite;
+    column-span: 4;
+}
