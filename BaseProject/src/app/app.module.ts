@@ -5,13 +5,15 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { WorkshopListComponent } from './workshop-list/workshop-list.component';
 import { WorkshopThumbnailComponent } from './workshop-thumbnail/workshop-thumbnail.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     WorkshopListComponent,
-    WorkshopThumbnailComponent
+    WorkshopThumbnailComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule
