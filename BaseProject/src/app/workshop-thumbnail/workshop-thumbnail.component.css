@@ -2,10 +2,15 @@
    margin-left: 10px 
 }
 
-.format-thumbnail{
-    background-color:darkgray; 
-    border-color: #333; 
+.card{
     cursor: pointer;
-    color: antiquewhite;
-    column-span: 4;
+    height: 170px;
+    /* column-span: "col-md-10"; */
+}
+
+.grow:hover
+{
+        -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        transform: scale(1.05);
 }
