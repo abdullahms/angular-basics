@@ -2,12 +2,15 @@
 
 <div class="grow">
   <div class="card hover card-body bg-dark text-white col-md-10">
-    <div>Date: {{workshop.date}}</div>
-    <div>Time: {{workshop.time}}</div>
-    <div>Price: ${{workshop.price}}</div>
-    <div>
-      <span>Location: {{workshop.location.address}}</span>
-      <span class="pad-left">{{workshop.location.city}}, {{workshop.location.country}}</span>
+    <div>Date: {{workshop?.date}}</div>
+    <div>Time: {{workshop?.time}}</div>
+    <div>Price: ${{workshop?.price}}</div>
+    <div *ngIf="workshop?.location">
+      <span>Location: {{workshop?.location?.address}}</span>
+      <span class="pad-left">{{workshop?.location?.city}}, {{workshop?.location?.country}}</span>
+    </div>
+    <div *ngIf="workshop?.Online">
+      Online: {{workshop?.Online}}
     </div>
   </div>
 </div>
