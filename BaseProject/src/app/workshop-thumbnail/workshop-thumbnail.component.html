@@ -3,7 +3,13 @@
 <div class="grow">
   <div class="card hover card-body bg-dark text-white col-md-10">
     <div>Date: {{workshop?.date}}</div>
-    <div>Time: {{workshop?.time}}</div>
+    <div ngSwitch="workshop?.time">
+      Time: {{workshop?.time}}
+      <span *ngSwitchCase="'8:00 am'">(Early Start)</span>
+      <span *ngSwitchCase="'10:00 am'">(Late Start)</span>
+      <span *ngSwitchDefault>(Normal Start)</span>
+    </div>
+
     <div>Price: ${{workshop?.price}}</div>
     <div *ngIf="workshop?.location">
       <span>Location: {{workshop?.location?.address}}</span>
