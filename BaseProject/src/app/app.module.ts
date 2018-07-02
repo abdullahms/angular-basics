@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { WorkshopListComponent } from './workshop-list/workshop-list.component';
 import { WorkshopThumbnailComponent } from './workshop-thumbnail/workshop-thumbnail.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { WorkshopService } from './shared/workshop.service';
 
 
 @NgModule({
@@ -18,7 +19,7 @@ import { NavbarComponent } from './navbar/navbar.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [WorkshopService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
