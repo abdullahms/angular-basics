@@ -3,7 +3,7 @@
   <hr>
   <div class="row">
     <div *ngFor="let workshop of workshops" class="col-md-5">
-      <workshop-thumbnail [workshop]="workshop">
+      <workshop-thumbnail (click)="handleThumbnailClicked(workshop.name)" [workshop]="workshop">
       </workshop-thumbnail>
     </div>
   </div>
