@@ -1,6 +1,6 @@
 <h2 style="color: white">{{workshop.name}}</h2>
 
-<div class="grow">
+<div class="grow" [routerLink]="['/workshops',workshop.id]">
   <div class="card hover card-body bg-dark text-white col-md-10">
     <div>Date: {{workshop?.date}}</div>
     <div [ngSwitch]="workshop?.time">
