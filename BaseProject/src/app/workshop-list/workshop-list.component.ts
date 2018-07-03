@@ -3,7 +3,7 @@ import { WorkshopService } from '../shared/workshop.service';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
-  selector: 'workshop-list',
+  // selector: 'workshop-list',
   templateUrl: './workshop-list.component.html',
   styleUrls: ['./workshop-list.component.css']
 })

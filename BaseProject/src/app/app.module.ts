@@ -9,6 +9,9 @@ import { WorkshopListComponent } from './workshop-list/workshop-list.component';
 import { WorkshopThumbnailComponent } from './workshop-thumbnail/workshop-thumbnail.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { WorkshopService } from './shared/workshop.service';
+import { WorkshopDetailsComponent } from './workshop-details/workshop-details.component';
+import { appRoutes } from './routes'
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -16,10 +19,12 @@ import { WorkshopService } from './shared/workshop.service';
     AppComponent,
     WorkshopListComponent,
     WorkshopThumbnailComponent,
-    NavbarComponent
+    NavbarComponent,
+    WorkshopDetailsComponent
   ],
   imports: [
     BrowserModule,
+    RouterModule.forRoot(appRoutes),
     BrowserAnimationsModule,
     ToastrModule.forRoot()
   ],
