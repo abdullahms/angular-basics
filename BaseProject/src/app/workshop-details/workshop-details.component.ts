@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { WorkshopService } from '../shared/workshop.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-workshopdetails',
@@ -9,10 +10,13 @@ import { WorkshopService } from '../shared/workshop.service';
 export class WorkshopDetailsComponent implements OnInit {
 
   workshop: any;
-  constructor(private workshopService: WorkshopService) { }
+  constructor(private workshopService: WorkshopService,
+    private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.workshop = this.workshopService.getEvent(1);
+    this.workshop = this.workshopService.getEvent(
+      +this.route.snapshot.params['id']
+    );
   }
 
 }
