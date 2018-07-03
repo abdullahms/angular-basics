@@ -12,6 +12,8 @@ import { WorkshopService } from './shared/workshop.service';
 import { WorkshopDetailsComponent } from './workshop-details/workshop-details.component';
 import { appRoutes } from './routes'
 import { RouterModule } from '@angular/router';
+import { CreateWorkshopComponent } from './create-workshop/create-workshop.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import { RouterModule } from '@angular/router';
     WorkshopListComponent,
     WorkshopThumbnailComponent,
     NavbarComponent,
-    WorkshopDetailsComponent
+    WorkshopDetailsComponent,
+    CreateWorkshopComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
