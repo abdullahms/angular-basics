@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 })
 export class CreateWorkshopComponent implements OnInit {
 
+  isDirty: boolean = true;
   constructor(private router: Router) { }
 
   ngOnInit() {

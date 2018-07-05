@@ -14,7 +14,7 @@ export class WorkshopRouteActivator implements CanActivate {
     }
 
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | Observable<boolean> | Promise<boolean> {
-        const eventExists = !!this.workshopService.getEvent(route.params['id']);
+        const eventExists = !!this.workshopService.getEvent(+route.params['id']);
 
         if (!eventExists)
             this.router.navigate(['/404']);

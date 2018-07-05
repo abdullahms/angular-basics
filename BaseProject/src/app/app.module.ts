@@ -35,7 +35,20 @@ import { WorkshopRouteActivator } from './Routes/workflow-route-activator.servic
     BrowserAnimationsModule,
     ToastrModule.forRoot()
   ],
-  providers: [WorkshopService, WorkshopRouteActivator],
+  providers: [
+    WorkshopService,
+    WorkshopRouteActivator,
+    {
+      provide: 'canDeactivateCreateWorkshop',
+      useValue: checkDirtyState
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+function checkDirtyState(component: CreateWorkshopComponent) {
+  if (component.isDirty)
+    return window.confirm('You have not saved this event, do you really want to cancel?');
+  return true;
+}

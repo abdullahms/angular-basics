@@ -7,7 +7,7 @@ import { WorkshopRouteActivator } from './Routes/workflow-route-activator.servic
 
 
 export const appRoutes: Routes = [
-    { path: 'workshop/new', component: CreateWorkshopComponent },
+    { path: 'workshop/new', component: CreateWorkshopComponent, canDeactivate: ['canDeactivateCreateWorkshop'] },
     { path: 'workshops', component: WorkshopListComponent },
     { path: 'workshops/:id', component: WorkshopDetailsComponent, canActivate: [WorkshopRouteActivator] },
     { path: '404', component: Error404Component },
