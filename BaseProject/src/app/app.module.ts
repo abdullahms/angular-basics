@@ -14,6 +14,8 @@ import { appRoutes } from './routes'
 import { RouterModule } from '@angular/router';
 import { CreateWorkshopComponent } from './create-workshop/create-workshop.component';
 import { FooterComponent } from './footer/footer.component';
+import { Error404Component } from './error/error.component';
+import { WorkshopRouteActivator } from './Routes/workflow-route-activator.service';
 
 
 @NgModule({
@@ -24,7 +26,8 @@ import { FooterComponent } from './footer/footer.component';
     NavbarComponent,
     WorkshopDetailsComponent,
     CreateWorkshopComponent,
-    FooterComponent
+    FooterComponent,
+    Error404Component
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,7 @@ import { FooterComponent } from './footer/footer.component';
     BrowserAnimationsModule,
     ToastrModule.forRoot()
   ],
-  providers: [WorkshopService],
+  providers: [WorkshopService, WorkshopRouteActivator],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
