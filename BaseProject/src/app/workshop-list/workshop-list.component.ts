@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WorkshopService } from '../shared/workshop.service';
 import { ToastrService } from 'ngx-toastr';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   // selector: 'workshop-list',
@@ -9,14 +10,16 @@ import { ToastrService } from 'ngx-toastr';
 })
 
 export class WorkshopListComponent implements OnInit {
-  workshops: any[];
+  workshops: any;
 
 
   constructor(private workshopService: WorkshopService,
-    private toastr: ToastrService) { }
+    private toastr: ToastrService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.workshops = this.workshopService.getWorkshops();
+    // this.workshops = this.workshopService.getWorkshops()
+    //   .subscribe(workshops => this.workshops = workshops);
+    this.workshops = this.route.snapshot.data['workshops'];
   }
 
   handleThumbnailClicked(workshopName) {

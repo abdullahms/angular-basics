@@ -16,6 +16,7 @@ import { CreateWorkshopComponent } from './create-workshop/create-workshop.compo
 import { FooterComponent } from './footer/footer.component';
 import { Error404Component } from './error/error.component';
 import { WorkshopRouteActivator } from './Routes/workflow-route-activator.service';
+import { WorkshopListResolver } from './workshop-list/workshop-list-resolver';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { WorkshopRouteActivator } from './Routes/workflow-route-activator.servic
     {
       provide: 'canDeactivateCreateWorkshop',
       useValue: checkDirtyState
-    }
+    },
+    WorkshopListResolver
   ],
   bootstrap: [AppComponent]
 })
