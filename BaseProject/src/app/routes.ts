@@ -15,5 +15,6 @@ export const appRoutes: Routes = [
     },
     { path: 'workshops/:id', component: WorkshopDetailsComponent, canActivate: [WorkshopRouteActivator] },
     { path: '404', component: Error404Component },
-    { path: '', redirectTo: '/workshops', pathMatch: 'full' }
+    { path: '', redirectTo: '/workshops', pathMatch: 'full' },
+    { path: 'user', loadChildren: 'app/user/user-module#UserModule' }
 ]
