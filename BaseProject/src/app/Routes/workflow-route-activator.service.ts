@@ -1,7 +1,7 @@
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, Router } from "@angular/router";
 import { Observable } from "rxjs/Observable";
-import { WorkshopService } from "../shared/workshop.service";
 import { Injectable } from "@angular/core";
+import { WorkshopService } from "../workshops/shared/workshop.service";
 
 @Injectable()
 export class WorkshopRouteActivator implements CanActivate {
