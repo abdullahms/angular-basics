@@ -2,8 +2,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
-
-
+import {
+  WorkshopListComponent,
+  WorkshopThumbnailComponent,
+  WorkshopDetailsComponent,
+  WorkshopService,
+  WorkshopListResolver,
+  CreateWorkshopComponent
+} from './workshops/index';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { appRoutes } from './routes'
@@ -11,12 +17,6 @@ import { RouterModule } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
 import { Error404Component } from './error/error.component';
 import { WorkshopRouteActivator } from './Routes/workflow-route-activator.service';
-import { WorkshopListComponent } from './workshops/workshop-list/workshop-list.component';
-import { WorkshopThumbnailComponent } from './workshops/workshop-thumbnail/workshop-thumbnail.component';
-import { WorkshopDetailsComponent } from './workshops/workshop-details/workshop-details.component';
-import { WorkshopService } from './workshops/shared/workshop.service';
-import { WorkshopListResolver } from './workshops/workshop-list/workshop-list-resolver';
-import { CreateWorkshopComponent } from './workshops/create-workshop/create-workshop.component';
 
 
 @NgModule({
