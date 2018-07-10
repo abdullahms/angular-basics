@@ -15,8 +15,8 @@
       <span>Location: {{workshop?.location?.address}}</span>
       <span class="pad-left">{{workshop?.location?.city}}, {{workshop?.location?.country}}</span>
     </div>
-    <div *ngIf="workshop?.Online">
-      Online: {{workshop?.Online}}
+    <div *ngIf="workshop?.onlineUrl">
+      Online: {{workshop?.onlineUrl}}
     </div>
   </div>
 </div>

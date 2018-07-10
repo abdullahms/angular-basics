@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WorkshopService } from '../shared/workshop.service';
 import { ActivatedRoute } from '@angular/router';
+import { IWorkshop } from '..';
 
 @Component({
   selector: 'app-workshopdetails',
@@ -9,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class WorkshopDetailsComponent implements OnInit {
 
-  workshop: any;
+  workshop: IWorkshop;
   constructor(private workshopService: WorkshopService,
     private route: ActivatedRoute) { }
 

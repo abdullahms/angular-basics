@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { WorkshopService } from '../shared/workshop.service';
 import { ToastrService } from 'ngx-toastr';
 import { ActivatedRoute } from '@angular/router';
+import { IWorkshop } from '..';
 
 @Component({
   // selector: 'workshop-list',
@@ -10,7 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 
 export class WorkshopListComponent implements OnInit {
-  workshops: any;
+  workshops: IWorkshop[];
 
 
   constructor(private workshopService: WorkshopService,

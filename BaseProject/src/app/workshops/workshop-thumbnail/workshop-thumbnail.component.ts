@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { IWorkshop } from '..';
 
 @Component({
   selector: 'workshop-thumbnail',
@@ -7,7 +8,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class WorkshopThumbnailComponent implements OnInit {
 
-  @Input() workshop: any;
+  @Input() workshop: IWorkshop;
 
   constructor() { }
 
