@@ -1,7 +1,7 @@
 export interface IWorkshop {
     id: number;
     name: string;
-    date: Date;
+    date: string;
     time: string;
     price: number;
     imageUrl: string;

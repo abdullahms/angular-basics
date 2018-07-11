@@ -34,8 +34,8 @@ import { UserModule } from './user/user-module';
   imports: [
     BrowserModule,
     UserModule,
-    RouterModule.forRoot(appRoutes,
-      { enableTracing: true }), // For Debugging Purposes only
+    RouterModule.forRoot(appRoutes),
+    //{ enableTracing: true }), // For Debugging Purposes only
     BrowserAnimationsModule,
     ToastrModule.forRoot()
   ],

@@ -1,6 +1,6 @@
-<div>
-  <h1 style="color: white">Upcoming Angular 5 Workshops</h1>
-  <hr>
+<div style="color: white">
+  <h1>Upcoming Angular 5 Workshops</h1>
+  <hr style="border-color: inherit">
   <div class="row">
     <div *ngFor="let workshop of workshops" class="col-md-5">
       <workshop-thumbnail (click)="handleThumbnailClicked(workshop.name)" [workshop]="workshop">
