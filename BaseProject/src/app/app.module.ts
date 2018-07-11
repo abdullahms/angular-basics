@@ -18,6 +18,7 @@ import { FooterComponent } from './footer/footer.component';
 import { Error404Component } from './error/error.component';
 import { WorkshopRouteActivator } from './Routes/workflow-route-activator.service';
 import { UserModule } from './user/user-module';
+import { AuthService } from './user/services/auth-service';
 
 
 @NgModule({
@@ -42,6 +43,7 @@ import { UserModule } from './user/user-module';
   providers: [
     WorkshopService,
     WorkshopRouteActivator,
+    AuthService,
     {
       provide: 'canDeactivateCreateWorkshop',
       useValue: checkDirtyState
