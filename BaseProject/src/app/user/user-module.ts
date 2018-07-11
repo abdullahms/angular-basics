@@ -14,6 +14,9 @@ import { ProfileComponent } from "./profile/profile-component";
     ],
     providers: [
 
+    ],
+    exports: [
+        RouterModule
     ]
 })
 export class UserModule { }

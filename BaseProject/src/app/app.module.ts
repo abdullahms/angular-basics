@@ -17,6 +17,7 @@ import { RouterModule } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
 import { Error404Component } from './error/error.component';
 import { WorkshopRouteActivator } from './Routes/workflow-route-activator.service';
+import { UserModule } from './user/user-module';
 
 
 @NgModule({
@@ -32,7 +33,9 @@ import { WorkshopRouteActivator } from './Routes/workflow-route-activator.servic
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes),
+    UserModule,
+    RouterModule.forRoot(appRoutes,
+      { enableTracing: true }), // For Debugging Purposes only
     BrowserAnimationsModule,
     ToastrModule.forRoot()
   ],

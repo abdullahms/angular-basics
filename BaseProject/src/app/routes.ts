@@ -25,5 +25,5 @@ export const appRoutes: Routes = [
     },
     { path: '404', component: Error404Component },
     { path: '', redirectTo: '/workshops', pathMatch: 'full' },
-    { path: 'user', loadChildren: 'app/user/user-module#UserModule' }
+    { path: 'user', loadChildren: () => UserModule }
 ]
