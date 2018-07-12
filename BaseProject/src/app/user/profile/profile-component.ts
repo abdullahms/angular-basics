@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '../../../../node_modules/@angular/forms';
+import { FormControl, FormGroup, Validators } from '../../../../node_modules/@angular/forms';
 import { AuthService } from '../services/auth-service';
 import { Router } from '../../../../node_modules/@angular/router';
 
@@ -11,15 +11,17 @@ import { Router } from '../../../../node_modules/@angular/router';
 export class ProfileComponent implements OnInit {
 
   profileForm: FormGroup;
+  firstName: FormControl;
+  lastName: FormControl;
 
   constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit() {
-    let firstName = new FormControl(this.authService.currentUser.firstName);
-    let lastName = new FormControl(this.authService.currentUser.lastName);
+    this.firstName = new FormControl(this.authService.currentUser.firstName, Validators.required);
+    this.lastName = new FormControl(this.authService.currentUser.lastName, Validators.required);
     this.profileForm = new FormGroup({
-      firstName: firstName,
-      lastName: lastName
+      firstName: this.firstName,
+      lastName: this.lastName
     })
   }
 
@@ -28,8 +30,18 @@ export class ProfileComponent implements OnInit {
   }
 
   saveProfile(formValues) {
-    this.authService.updateCurrentUser(formValues.firstName, formValues.lastName);
-    this.router.navigate(["workshops"]);
+    if (this.profileForm.valid) {
+      this.authService.updateCurrentUser(formValues.firstName, formValues.lastName);
+      this.router.navigate(["workshops"]);
+    }
+  }
+
+  validateFirstName() {
+    return this.firstName.valid || this.firstName.untouched
+  }
+
+  validateLastName() {
+    return this.lastName.valid || this.lastName.untouched
   }
 
 }
