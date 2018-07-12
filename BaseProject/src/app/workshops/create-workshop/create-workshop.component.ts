@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { WorkshopService } from '../shared/workshop.service';
 
 @Component({
   selector: 'app-create-workshop',
@@ -9,12 +10,18 @@ import { Router } from '@angular/router';
 export class CreateWorkshopComponent implements OnInit {
 
   isDirty: boolean = true;
-  constructor(private router: Router) { }
+  constructor(private router: Router, private workshopService: WorkshopService) { }
 
   ngOnInit() {
   }
 
   cancel() {
+    this.router.navigate(['/workshops']);
+  }
+
+  saveEvent(formValues) {
+    this.workshopService.saveWorkshop(formValues);
+    this.isDirty = false;
     this.router.navigate(['/workshops']);
   }
 }

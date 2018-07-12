@@ -19,6 +19,7 @@ import { Error404Component } from './error/error.component';
 import { WorkshopRouteActivator } from './Routes/workflow-route-activator.service';
 import { UserModule } from './user/user-module';
 import { AuthService } from './user/services/auth-service';
+import { FormsModule, ReactiveFormsModule } from '../../node_modules/@angular/forms';
 
 
 @NgModule({
@@ -35,6 +36,8 @@ import { AuthService } from './user/services/auth-service';
   imports: [
     BrowserModule,
     UserModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(appRoutes),
     //{ enableTracing: true }), // For Debugging Purposes only
     BrowserAnimationsModule,

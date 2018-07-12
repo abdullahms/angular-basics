@@ -19,6 +19,12 @@ export class WorkshopService {
   getEvent(id: number): IWorkshop {
     return WORKSHOPS.find(workshop => workshop.id === id);
   }
+
+  saveWorkshop(workshop: IWorkshop) {
+    workshop.id = 999;
+    workshop.sessions = [];
+    WORKSHOPS.push(workshop);
+  }
 }
 
 const WORKSHOPS: IWorkshop[] = [
