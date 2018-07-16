@@ -7,9 +7,10 @@ import {
     WorkshopListComponent,
     WorkshopListResolver,
     WorkshopDetailsComponent,
-    CreateWorkshopComponent
+    CreateWorkshopComponent,
+    EditworkshopComponent,
+    CreateSessionComponent
 } from './workshops/index'
-import { EditworkshopComponent } from './workshops/editworkshop/editworkshop.component';
 
 export const appRoutes: Routes = [
     {
@@ -24,6 +25,7 @@ export const appRoutes: Routes = [
         path: 'workshops/:id', component: WorkshopDetailsComponent,
         canActivate: [WorkshopRouteActivator]
     },
+    { path: 'workshop/session/new', component: CreateSessionComponent },
     { path: 'editworkshop/:id', component: EditworkshopComponent },
     { path: '404', component: Error404Component },
     { path: '', redirectTo: '/workshops', pathMatch: 'full' },

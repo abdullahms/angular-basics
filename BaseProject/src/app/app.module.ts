@@ -21,6 +21,7 @@ import { UserModule } from './user/user-module';
 import { AuthService } from './user/services/auth-service';
 import { FormsModule, ReactiveFormsModule } from '../../node_modules/@angular/forms';
 import { EditworkshopComponent } from './workshops/editworkshop/editworkshop.component';
+import { CreateSessionComponent } from './workshops/create-session/create-session.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { EditworkshopComponent } from './workshops/editworkshop/editworkshop.com
     CreateWorkshopComponent,
     FooterComponent,
     Error404Component,
-    EditworkshopComponent
+    EditworkshopComponent,
+    CreateSessionComponent
   ],
   imports: [
     BrowserModule,

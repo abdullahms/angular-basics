@@ -5,3 +5,5 @@ export * from './workshop-details/workshop-details.component';
 export * from './workshop-list/workshop-list.component';
 export * from './workshop-list/workshop-list-resolver';
 export * from './workshop-thumbnail/workshop-thumbnail.component';
+export * from './editworkshop/editworkshop.component';
+export * from './create-session/create-session.component';
