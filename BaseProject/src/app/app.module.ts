@@ -20,6 +20,7 @@ import { WorkshopRouteActivator } from './Routes/workflow-route-activator.servic
 import { UserModule } from './user/user-module';
 import { AuthService } from './user/services/auth-service';
 import { FormsModule, ReactiveFormsModule } from '../../node_modules/@angular/forms';
+import { EditworkshopComponent } from './workshops/editworkshop/editworkshop.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { FormsModule, ReactiveFormsModule } from '../../node_modules/@angular/fo
     WorkshopDetailsComponent,
     CreateWorkshopComponent,
     FooterComponent,
-    Error404Component
+    Error404Component,
+    EditworkshopComponent
   ],
   imports: [
     BrowserModule,

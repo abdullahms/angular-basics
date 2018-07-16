@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { WorkshopService } from '../shared/workshop.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { IWorkshop } from '..';
 
 @Component({
@@ -12,12 +12,20 @@ export class WorkshopDetailsComponent implements OnInit {
 
   workshop: IWorkshop;
   constructor(private workshopService: WorkshopService,
-    private route: ActivatedRoute) { }
+    private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
     this.workshop = this.workshopService.getEvent(
       +this.route.snapshot.params['id']
     );
+  }
+
+  editEvent() {
+    console.log("Hit It");
+  }
+
+  handleEditWsClick(workshopName) {
+    this.router.navigate(['/editworkshop', this.workshop.id]);
   }
 
 }

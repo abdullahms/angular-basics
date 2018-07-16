@@ -1,21 +1,24 @@
-<div style="color: white">
-  <img [src]="workshop?.imageUrl" [alt]="workshop?.name" class="workshop-image">
+<form (ngSubmit)="editEvent()" autocomplete="off">
+  <div style="color: white">
+    <img [src]="workshop?.imageUrl" [alt]="workshop?.name" class="workshop-image">
 
-  <div class="row">
-    <div class="col-md-6">
-      <div>
-        <strong>Date:</strong> {{workshop?.date | date:'medium'}}</div>
-      <div>
-        <strong>Time:</strong> {{workshop?.time}}</div>
-      <div>
-        <strong>Price:</strong> ${{workshop?.price}}</div>
+    <div class="row">
+      <div class="col-md-6">
+        <div>
+          <strong>Date:</strong> {{workshop?.date | date:'medium'}}</div>
+        <div>
+          <strong>Time:</strong> {{workshop?.time}}</div>
+        <div>
+          <strong>Price:</strong> ${{workshop?.price}}</div>
+      </div>
+      <div class="col-md-6">
+        <address>
+          <strong>Address:</strong>
+          <br /> {{workshop?.location?.address}}
+          <br /> {{workshop?.location?.city}}, {{workshop?.location?.country}}
+        </address>
+      </div>
     </div>
-    <div class="col-md-6">
-      <address>
-        <strong>Address:</strong>
-        <br /> {{workshop?.location?.address}}
-        <br /> {{workshop?.location?.city}}, {{workshop?.location?.country}}
-      </address>
-    </div>
+    <input type="submit" class="btn btn-primary" value="Edit Workshop" (click)="handleEditWsClick(workshop?.name)">
   </div>
-</div>
+</form>

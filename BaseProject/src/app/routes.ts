@@ -9,6 +9,7 @@ import {
     WorkshopDetailsComponent,
     CreateWorkshopComponent
 } from './workshops/index'
+import { EditworkshopComponent } from './workshops/editworkshop/editworkshop.component';
 
 export const appRoutes: Routes = [
     {
@@ -23,6 +24,7 @@ export const appRoutes: Routes = [
         path: 'workshops/:id', component: WorkshopDetailsComponent,
         canActivate: [WorkshopRouteActivator]
     },
+    { path: 'editworkshop/:id', component: EditworkshopComponent },
     { path: '404', component: Error404Component },
     { path: '', redirectTo: '/workshops', pathMatch: 'full' },
     { path: 'user', loadChildren: () => UserModule }
