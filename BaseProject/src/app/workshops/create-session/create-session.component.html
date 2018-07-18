@@ -1,7 +1,7 @@
 <div class="col-md-12" style="color: whitesmoke">
   <h3>Create Session</h3>
 </div>
-<div class="col-md-6" style="color: whitesmoke">
+<div class="col-md-6" style="color: whitesmoke; overflow: visible;">
   <form [formGroup]="newSessionForm" (ngSubmit)="saveSession(newSessionForm.value)" autocomplete="off">
     <div class="form-group" [ngClass]="{'error': abstract.invalid && abstract.dirty}">
       <label for="sessionName">Session Name:</label>
@@ -16,7 +16,7 @@
     <div class="form-group" [ngClass]="{'error': abstract.invalid && abstract.dirty}">
       <label for="duration">Duration:</label>
       <em *ngIf="duration.invalid && duration.dirty">Required</em>
-      <select formControlName="duration" class="form-control">
+      <select formControlName="duration" class="form-control" style="height: 30px">
         <option value="">select duration...</option>
         <option value="1">Half Hour</option>
         <option value="2">1 Hour</option>
@@ -27,7 +27,7 @@
     <div class="form-group" [ngClass]="{'error': abstract.invalid && abstract.dirty}">
       <label for="level">Level:</label>
       <em *ngIf="level.invalid && level.dirty">Required</em>
-      <select formControlName="level" class="form-control">
+      <select formControlName="level" class="form-control" style="height: 30px">
         <option value="">select level...</option>
         <option value="Beginner">Beginner</option>
         <option value="Intermediate">Intermediate</option>
@@ -44,3 +44,27 @@
     <button type="button" class="btn btn-default">Cancel</button>
   </form>
 </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
