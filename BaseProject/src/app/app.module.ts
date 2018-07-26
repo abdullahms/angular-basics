@@ -23,6 +23,7 @@ import { AuthService } from './user/services/auth-service';
 import { FormsModule, ReactiveFormsModule } from '../../node_modules/@angular/forms';
 import { EditworkshopComponent } from './workshops/editworkshop/editworkshop.component';
 import { CreateSessionComponent } from './workshops/create-session/create-session.component';
+import { CollapsibleCardComponent } from '../common/collapsible-card/collapsible-card.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { CreateSessionComponent } from './workshops/create-session/create-sessio
     Error404Component,
     EditworkshopComponent,
     CreateSessionComponent,
-    SessionListComponent
+    SessionListComponent,
+    CollapsibleCardComponent
   ],
   imports: [
     BrowserModule,

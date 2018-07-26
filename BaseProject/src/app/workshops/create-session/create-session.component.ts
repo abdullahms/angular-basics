@@ -50,4 +50,8 @@ export class CreateSessionComponent implements OnInit {
     this.saveNewSession.emit(session);
   }
 
+  cancel() {
+
+  }
+
 }
