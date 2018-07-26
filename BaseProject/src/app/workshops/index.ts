@@ -7,3 +7,4 @@ export * from './workshop-list/workshop-list-resolver';
 export * from './workshop-thumbnail/workshop-thumbnail.component';
 export * from './editworkshop/editworkshop.component';
 export * from './create-session/create-session.component';
+export * from "./session-list/session-list.component";

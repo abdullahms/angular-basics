@@ -8,7 +8,8 @@ import {
   WorkshopDetailsComponent,
   WorkshopService,
   WorkshopListResolver,
-  CreateWorkshopComponent
+  CreateWorkshopComponent,
+  SessionListComponent
 } from './workshops/index';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -35,7 +36,8 @@ import { CreateSessionComponent } from './workshops/create-session/create-sessio
     FooterComponent,
     Error404Component,
     EditworkshopComponent,
-    CreateSessionComponent
+    CreateSessionComponent,
+    SessionListComponent
   ],
   imports: [
     BrowserModule,

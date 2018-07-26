@@ -20,5 +20,9 @@
       </div>
     </div>
     <input type="submit" class="btn btn-primary" value="Edit Workshop" (click)="handleEditWsClick(workshop?.name)">
+
+    <hr>
+
+    <session-list [sessions]="workshop?.sessions"></session-list>
   </div>
 </form>
