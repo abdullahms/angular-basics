@@ -25,6 +25,11 @@ export class WorkshopService {
     workshop.sessions = [];
     WORKSHOPS.push(workshop);
   }
+
+  updateWorkshop(workshop) {
+    let index = WORKSHOPS.findIndex(x => x.id = workshop.id);
+    WORKSHOPS[index] = workshop;
+  }
 }
 
 const WORKSHOPS: IWorkshop[] = [
